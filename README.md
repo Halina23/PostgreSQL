@@ -48,6 +48,6 @@ O que aprendi: A IA é um excelente "copiloto", mas eu precisei entender a estru
 ### Durante o projeto, vi que havia dados cruzando os resultados do Python com o PostgreSQL. Identifiquei uma divergência inicial causada por pedidos cancelados presentes no CSV. Após aplicar filtros de status no Pandas, os valores foram validados com precisão de 100% em relação ao banco de dados (R$ 33.929,83 para o estado do CE).
 
 
-
+![Gráfico de Faturamento Validado](grafico_faturamento_validado.png)
 
 
