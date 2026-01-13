@@ -42,3 +42,12 @@ Validação de Dados: Usei comandos como df.info() e df.groupby() para garantir 
 Visualização: Com o apoio da IA, personalizei as cores e rótulos dos gráficos para criar uma apresentação visual clara para o projeto.
 
 O que aprendi: A IA é um excelente "copiloto", mas eu precisei entender a estrutura do Python para saber onde colar o código, como corrigir erros de NameError e como salvar meus arquivos em JSON para garantir a segurança dos dados.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Durante o projeto, vi que havia dados cruzando os resultados do Python com o PostgreSQL. Identifiquei uma divergência inicial causada por pedidos cancelados presentes no CSV. Após aplicar filtros de status no Pandas, os valores foram validados com precisão de 100% em relação ao banco de dados (R$ 33.929,83 para o estado do CE).
+
+
+![Gráfico de Faturamento Validado](grafico_faturamento_validado.png)
+
+
