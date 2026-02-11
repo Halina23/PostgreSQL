@@ -51,3 +51,45 @@ O que aprendi: A IA é um excelente "copiloto", mas eu precisei entender a estru
 ![Gráfico de Faturamento Validado](grafico_faturamento_validado.png)
 
 
+
+
+
+## ⚠️ Observações sobre os dados
+
+Durante as análises foi identificada uma atualização em massa no banco em 03/02/2026 que padronizou todos os pedidos como "Pago".
+
+Impactos:
+- Métricas de cancelamento e pendência deixaram de ser analisáveis
+- Análises foram redirecionadas para faturamento e comportamento de compra
+
+Esse registro foi mantido por transparência e controle de qualidade dos dados.
+
+
+## Balanceamento de Status de Pagamento
+
+Para permitir análises de conversão, cancelamento e inadimplência,
+foi criada uma base simulada com distribuição controlada de status de pagamento.
+
+Objetivo:
+- Simular cenários reais de e-commerce
+- Permitir análises de taxa de conversão
+- Estudar impacto de cancelamentos no faturamento
+
+Distribuição adotada:
+- 70% pagos
+- 20% cancelados
+- 10% pendentes
+
+A base original foi preservada.
+
+## Qualidade de Dados
+
+- Detecção de atualização massiva de status
+- Registro da data da inconsistência
+- Preservação da base original
+- Criação de dataset controlado para análise
+
+
+
+
+### Essa simulação foi realizada exclusivamente para fins analíticos e de estudo.
