@@ -1,95 +1,88 @@
-### 🚀 E-commerce & Logística com PostgreSQL
+## 🚀  E-commerce & Logística com PostgreSQL
 
-Este repositório reúne meus estudos práticos de banco de dados, simulando o backend e a análise de dados de um sistema de vendas. 
+## Projeto prático de Banco de Dados simulando o backend e a camada analítica de um sistema de vendas, com foco em modelagem relacional, consultas SQL, validação de dados e visualização para suporte à decisão.
 
-### 📂 O que tem aqui?
+## 🎯 Objetivo do Projeto
 
-Modelagem: Criação de tabelas com relacionamentos (1:N, N:N) e normalização. 
+Simular um ambiente corporativo de e-commerce, estruturando:
+Banco de dados relacional
+Consultas analíticas para indicadores de negócio
+Tratamento e validação de dados com Python
+Construção de dashboard executivo
 
-Queries Analíticas: Scripts SQL para calcular Faturamento e Ticket Médio por Estado.
+## 🗄️ Etapa 1: Modelagem e Banco de Dados
+Modelagem Relacional
+Criação de tabelas com relacionamentos 1:N e N:N
+Aplicação de normalização
+Estrutura preparada para maior volume de dados
+Queries Analíticas
+Desenvolvimento de consultas SQL para:
+Faturamento por estado
+Ticket Médio
+Ranking de receita por região
+Receita por canal de venda
+Performance
 
-### 💡 Desafios que resolvi:
+## Uso de EXPLAIN para análise de consultas
 
-Limpeza: Como tratar dados de vendas com status "Cancelado" ou "Pendente". (Em andamento)
+Identificação de possíveis gargalos
 
-Performance: Uso de EXPLAIN para identificar consultas lentas e otimizá-las. 
+## 🐍 Etapa 2: Tratamento e Validação com Python
 
-Insights: Transformar linhas de código em respostas sobre onde a empresa está vendendo mais. (Em andamento)
+Objetivo: validar e analisar os dados fora do banco, simulando fluxo real de BI.
 
-### 🛠️ Tecnologias
+## Ambiente
 
-PostgreSQL (Banco principal)
+Criação de ambiente .conda
+Uso de Pandas e Matplotlib
+Validação Cruzada
+Conferência de valores entre PostgreSQL e Python
+Identificação de divergência causada por pedidos cancelados no CSV
+Aplicação de filtros de status no Pandas
+Validação final com 100% de precisão em relação ao banco
 
-MySQL (Projetos anteriores) 
+## Exemplo validado:
+CE: R$ 33.929,83
 
----------------------------------------------------------------------------------------------------------------------------
+## Aprendizados
+Estrutura de dados em DataFrame
+Tratamento de inconsistências
+Correção de erros (ex: NameError)
 
-### Próximos Passos: Integrar esses dados com Python (Pandas) para automação de limpeza e criação de dashboards. 
-### Esse projeto como um todo, ainda está em andamento. 
-----------------------------------------------------------------------------------------------------------------------------
+## Uso de IA como apoio para acelerar escrita de código
 
-### 🐍Etapa 2: Tratamento e Gráficos com Python
-Nesta fase, meu objetivo foi sair do banco de dados e aprender a manipular os dados usando Python. Como estou no início da minha jornada, utilizei o Chat Lateral (AI Agent) do VS Code para me ajudar a escrever os códigos de forma mais rápida e eficiente.
+## 📊 Etapa 3: Dashboard de Performance Comercial
 
-### O que eu fiz:
+Com a base estruturada e validada, foi desenvolvido um dashboard com foco executivo.
 
-Aceleração com IA: Em vez de digitar cada linha do zero, usei prompts para gerar a base do código, o que reduziu consideravelmente meu tempo de trabalho e me permitiu focar na lógica da análise.
+## Destaques:
 
-Configuração de Ambiente: Aprendi a criar um ambiente .conda e a instalar bibliotecas como Pandas e Matplotlib via terminal quando a IA identificava que elas faziam falta.
+KPIs em formato de cards
+Ticket Médio: R$ 10.954,96
+Receita por canal (Marketplace, Site, Loja Física)
+Ranking por estado
+Análise mensal de faturamento
+Monitoramento de Anomalias
+Identificação de queda de -85,60% em março/2026, simulando cenário de investigação técnica.
 
-Validação de Dados: Usei comandos como df.info() e df.groupby() para garantir que o código gerado pela IA estava entregando os mesmos R$ 108.612,07 do Ceará que eu já tinha validado no SQL.
+## ⚠️ Qualidade e Controle de Dados
 
-Visualização: Com o apoio da IA, personalizei as cores e rótulos dos gráficos para criar uma apresentação visual clara para o projeto.
-
-O que aprendi: A IA é um excelente "copiloto", mas eu precisei entender a estrutura do Python para saber onde colar o código, como corrigir erros de NameError e como salvar meus arquivos em JSON para garantir a segurança dos dados.
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-### Durante o projeto, vi que havia dados cruzando os resultados do Python com o PostgreSQL. Identifiquei uma divergência inicial causada por pedidos cancelados presentes no CSV. Após aplicar filtros de status no Pandas, os valores foram validados com precisão de 100% em relação ao banco de dados (R$ 33.929,83 para o estado do CE).
-
-
-![Gráfico de Faturamento Validado](grafico_faturamento_validado.png)
-
-
-
-
-
-## ⚠️ Observações sobre os dados
-
-Durante as análises foi identificada uma atualização em massa no banco em 03/02/2026 que padronizou todos os pedidos como "Pago".
-
+Durante o projeto foi identificada uma atualização massiva de status em 03/02/2026 que padronizou pedidos como “Pago”.
 Impactos:
-- Métricas de cancelamento e pendência deixaram de ser analisáveis
-- Análises foram redirecionadas para faturamento e comportamento de compra
+Métricas de cancelamento ficaram comprometidas
+Análises redirecionadas para faturamento e comportamento de compra
+Para fins analíticos, foi criada base simulada com distribuição controlada:
 
-Esse registro foi mantido por transparência e controle de qualidade dos dados.
+## 70% pagos
+## 20% cancelados
+## 10% pendentes
 
+## A base original foi preservada para controle e rastreabilidade.
 
-## Balanceamento de Status de Pagamento
+## 🛠️ Tecnologias
 
-Para permitir análises de conversão, cancelamento e inadimplência,
-foi criada uma base simulada com distribuição controlada de status de pagamento.
+PostgreSQL
+MySQL
+Python (Pandas, Matplotlib)
+VS Code
 
-Objetivo:
-- Simular cenários reais de e-commerce
-- Permitir análises de taxa de conversão
-- Estudar impacto de cancelamentos no faturamento
-
-Distribuição adotada:
-- 70% pagos
-- 20% cancelados
-- 10% pendentes
-
-A base original foi preservada.
-
-## Qualidade de Dados
-
-- Detecção de atualização massiva de status
-- Registro da data da inconsistência
-- Preservação da base original
-- Criação de dataset controlado para análise
-
-
-
-
-### Essa simulação foi realizada exclusivamente para fins analíticos e de estudo.
